@@ -20,9 +20,9 @@
 
       FIMAGE = 0
 c      CALL coext.py
-c      OPEN (UNIT=11,FILE='/home/dorado/varsha/M33/hst/raw/2dimg/ldy5a3lqq_flt_a_t1.txt', STATUS='OLD')
-      OPEN (UNIT=11,FILE='/home/dorado/varsha/M33/hst/raw/2dimg/ldy5b2vkq_flt_a_t1.txt', STATUS='OLD')
-c      OPEN (UNIT=11,FILE='/home/dorado/varsha/M33/hst/raw/2dimg/laa110gjq_flt_a_t1.txt', STATUS='OLD')
+c      OPEN (UNIT=11,FILE='M33/hst/raw/2dimg/ldy5a3lqq_flt_a_t1.txt', STATUS='OLD')
+      OPEN (UNIT=11,FILE='M33/hst/raw/2dimg/ldy5b2vkq_flt_a_t1.txt', STATUS='OLD')
+c      OPEN (UNIT=11,FILE='M33/hst/raw/2dimg/laa110gjq_flt_a_t1.txt', STATUS='OLD')
       
       DO IROW=1, 1024
          READ (11, *, err=99) (FIMAGE(IROW,ICOL), ICOL=1,16384)
@@ -68,7 +68,7 @@ c        XLAMDA(K)=FLOAT(K)
      >        ,XLAMDA,SPECSMOOTH,10000, 5)
       
 
-      OPEN (UNIT=12,FILE='/home/dorado/varsha/M33/hst/raw/2dimg/prof_tab.txt', STATUS='OLD')
+      OPEN (UNIT=12,FILE='M33/hst/raw/2dimg/prof_tab.txt', STATUS='OLD')
       PROF = 0
       DO IROW=1, 359
          READ (12, *, err=99) (PROF(IROW,ICOL), ICOL=1,16384)
